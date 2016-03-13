@@ -1,0 +1,434 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    max-width: 100%;
+}
+
+
+.center{
+    text-align: center;
+    }
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    }
+
+.row{
+    margin-left: -15px;
+    margin-right: -15px;
+ }
+
+ 
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.row:after, .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+ li {
+    list-style-type: none; /* Убираем маркеры */
+   }
+ul {
+    margin-left: 0; /* Отступ слева в браузере IE и Opera */
+    padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+   }
+
+
+body{
+    min-width: 1200px;
+    font-family: "Open Sans", sans-serif;
+    color: #fff;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0;
+    display: block;
+}
+
+.navigation {
+    min-height: 70px;
+    background-color: #fff;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #ef5350;
+}
+
+.logo {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 70px;
+}
+
+.main_navigation li {
+    display: inline-block;
+    margin-right: 12px;
+    line-height: 70px;
+}
+
+.main_navigation li:last-child {
+    margin-right: 0;
+} 
+
+.main_navigation a {
+    padding: 10px 20px;
+    line-height: 32px;
+}
+
+.main_navigation a:hover {
+    color:#90a4ae;
+}
+
+.header_phone_right{
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    padding: 10px 20px;
+    float: right;
+    margin-top: 12px;
+    
+}
+
+.promo_block {
+    
+    background-image: url(../img/bg_fluger_main.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    height: 635px;
+    padding: 125px 0 130px;
+    color: #fff;
+    text-align: center;
+}
+
+.promo_block_title {
+    
+    font-size: 36px;
+    color: #fff;
+    padding-top: 150px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 4px;
+    padding-bottom: 2px;
+    
+}
+
+
+.promo_block_address {
+   
+    margin: 0;
+    font-size: 18px;
+    color: #fff;
+    line-height: 80px;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.btn_promo{
+    
+    text-decoration: none;
+    outline: none;
+    background: none;
+    line-height: 22px;
+    color:#fff;
+    box-sizing:border-box;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: 1px solid #ef5350;
+    align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+    width: 300px;
+    height: 50px;
+}
+
+.about_fluger{
+    background-color: #ef5350;
+    margin-bottom: 45px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    min-height: 315px;
+    
+}
+
+.second_title{
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 500;
+    color: #444;
+    position: relative;
+    margin: 0;
+    margin-bottom: 45px;
+    padding-bottom: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.second_title::after{
+    content:"";
+    position: absolute;
+    top: 40px;
+    left: 47.6%;
+    width: 60px;
+    height: 6px;
+    background: #ef5350;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.about_fluger_title_center{
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+
+}
+
+.about_fluger_title{
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.about_fluger_go{
+    font-size: 14px;
+    color: #fff;
+}
+
+.btn_promo_option{
+    text-decoration: none;
+    outline: none;
+    background: none;
+    line-height: 22px;
+    color:#ef5350;
+    box-sizing:border-box;
+    padding: 12px 0 12px 0;
+    margin: 20px 0 30px 0;
+    border: 2px solid #ef5350;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 45px;
+    text-align: center;
+    width: 300px;
+    height: 50px;
+}
+
+.about_fluger_title_sm{
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.rooms{
+    margin-bottom: 50px;
+}
+
+.room_preview_info{
+     padding: 9px 20px;
+     width:auto;
+     height:auto;
+}
+
+.room_preview_title{
+    font-family: "Open Sans", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.room_preview_info_text{
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.room_preview_info_sum{
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.contacts_address{
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.contacts_phone{
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.contacts_email{
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.map{
+  height: 445px;
+  background-color: #ccc;
+}
+
+.footer_contacts{
+    background-color: #ef5350;  
+    min-height: 215px;
+    padding-top: 20px;
+}
+
+.footer_address, .footer_phone, .copyright{
+    font-size: 14px;
+    color: #fff;
+}
+
+.foot_nav a{
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.foot_nav a:hover{
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+    color: #90a4ae;
+}
+
+.promo_block_rooms{
+    background-image: url(../img/bg_fluger_rooms.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    height: 635px;
+    padding: 125px 0 130px;
+    color: #fff;
+    text-align: center;
+}
+
+.rooms{
+    padding: 50px;
+
+}
+
+.promo_title_rooms{
+    font-size: 36px;
+    color: #ef5350;
+    padding-top: 150px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 4px;
+    padding-bottom: 2px;
+}
+
+.promo_address_rooms{
+    margin: 0;
+    font-size: 18px;
+    color: #000;
+    line-height: 80px;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.promo_title_rooms_sum{
+    font-size: 24px;
+    color: #ef5350;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.promo_block_photo{
+    background-image: url(../img/bg_fluger_photo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    height: 635px;
+    padding: 125px 0 130px;
+    color: #ef5350;
+    text-align: center;
+
+}
+
+.promo_title_photo{
+    font-size: 36px;
+    color: #ef5350;
+    padding-top: 150px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 4px;
+    padding-bottom: 2px;
+}
+
+.promo_address_photo{
+    margin: 0;
+    font-size: 18px;
+    color: #000;
+    line-height: 80px;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.ground_floor_photo{
+    padding: 50px;
+}
+
+.title_floor_photo{
+    font-size: 24px;
+    color:#ef5350;
+    position: left;
+    margin: 0;
+    padding-bottom: 25px;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.subtitle_title_floor_photo{
+    font-size: 18px;
+    color:#607d8b;
+    position: left;
+    margin: 0;
+    text-align: left;
+    font-weight: bold;
+
+}
+
+.copyright{
+    padding-top: 50px;
+
+}
