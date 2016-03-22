@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Fluger</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,cyrillic" rel="stylesheet" type="text/css">
   </head>
 
 <body>
@@ -14,98 +13,132 @@
   <header class="navigation">
     <div class="container">
     <div class="row">
-     <a href="index.html" class="logo_left"><img src="img/logo_fluger.png" alt="logo"></a>
-      <nav class="main_navigation right">
+     <a href="index.html" class="col-sm-8 col-lg-3 logo_left"><img src="img/logo_fluger.png" alt="logo"></a>
+      <nav class="header_navigation right hidden-xs hidden-sm hidden-md col-lg-7">
         <ul class="right"> 
-          <li><a href="rooms.html">Номера</a></li>
-          <li><a href="photo.html">Фото</a></li>
-          <li><a href="#guest">Гостям</a></li>
-          <li><a href="#reserv">Забронировать</a></li>
-        <div class="header_phone_right"><p class="header_phone_number">+7-999-105-05-25</p></div>
+          <li class="right_item"><a href="rooms.html">Номера</a></li>
+          <li class="right_item"><a href="photo.html">Фото</a></li>
+          <li class="right_item"><a href="#guest">Гостям</a></li>
+          <li class="right_item"><a href="#reserv">Забронировать</a></li>
         </ul>
-     </nav>
+      </nav>  
+      <div class="right_phone hidden-xs col-sm-4 col-md-4 col-lg-2"><p>+7 999 105-05-25</p>
+      </div>
     </div>
-    </div>
+   </div>
   </header>
 
 
 <main>
+
   <section class="promo_block">
     <div class="container">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-offset-2 col-lg-8">
       <h1 class="promo_block_title">Хостел в центра Петербурга</h1>
       <p class="promo_block_address">наб. Канала Грибоедова, 29</p>
-      <a href="#" class="btn_promo">Забронировать</a>
+      <a href="#" class="btn btn_promo">Забронировать</a>
+    </div>
     </div>
   </section>
 
   <section class="about_fluger">
     <div class="container">
-      <h2 class="about_fluger_title_center">Что такое "Флюгер"?</h2>
-      <div class="row">
-        <div class="col-xs-12 col-sm-4 about_fluger">
-          <img src="img/directions_icon.png">
-          <div class="about_fluger_title">Центр города</div>
+     <div class="row">
+      <h1 class="about_fluger_title_center">Что такое "Флюгер"?</h1>
+      
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 about_fluger_pic">
+          <div class="about_fluger_title_town">Центр города</div>
           <div class="about_fluger_go">15 минут пешком до музеев и баров</div>
         </div>
-        <div class="col-xs-12 col-sm-4 about_fluger"><img src="img/sunsets_icon.png">
-          <div class="about_fluger_title">Закаты на крыше</div>
+
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 about_fluger_pic">
+          <div class="about_fluger_title_roof">Закаты на крыше</div>
           <div class="about_fluger_go">С видом на канал Грибоедова и Спас-на-Крови</div>
         </div>
-        <div class="col-xs-12 col-sm-4 about_fluger"><img src="img/key_icon.png">
-          <div class="about_fluger_title">Светлые номера</div>
+
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 about_fluger_pic">
+          <div class="about_fluger_title_number">Светлые номера</div>
           <div class="about_fluger_go">На 12, 6 и 2 человек от 500 до 2500 за ночь</div>
         </div>
+
       </div>
     </div>
   </section>
 
   <section class="rooms_preview">
     <div class="container">
+     <div class="row">
       <h2 class="second_title">Номера</h2>
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 room_preview_block">
-          <div class="room_preview_info"><img src="img/room_1.jpg" alt="room_1">
-            <h3 class="room_preview_title">12-местный</h3>
-            <p class="room_preview_info_text">Место:</p>
-            <p class="room_preview_info_sum">500 Р</p>
-            <p class="room_preview_info_text">Номер:</p>
-            <p class="room_preview_info_sum">5000 Р</p>
+      
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 room_preview_block">
+          <div class="room_preview_info room_12_place">
+            <h2 class="room_preview_title">12-местный</h2>
+             <table class="rooms preview_table">
+              <tr>
+                <th>Место:</th>
+                <td>500 Р</td>
+              </tr>
+              <tr>
+                <th>Номер:</th>
+                <td>5000 Р</td>
+              </tr>
+            </table>
           </div>
         </div>
-        <div class="col-xs-12 col-sm-6 room_preview_block">
-          <div class="room_preview_info"><img src="img/room_2.jpg" alt="room_2">
-            <h3 class="room_preview_title">6-местный</h3>
-            <p class="room_preview_info_text">Место:</p>
-            <p class="room_preview_info_sum">500 Р</p>
-            <p class="room_preview_info_text">Номер:</p>
-            <p class="room_preview_info_sum">5000 Р</p>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 room_preview_block">
+          <div class="room_preview_info room_6_place">
+            <h2 class="room_preview_title">6-местный</h2>
+            <table class="rooms preview_table">
+              <tr>
+                <th>Место:</th>
+                <td>500 Р</td>
+              </tr>
+              <tr>
+                <th>Номер:</th>
+                <td>5000 Р</td>
+              </tr>
+            </table>
           </div>
         </div>
-        <div class="col-xs-12 col-sm-6 room_preview_block">
-          <div class="room_preview_info"><img src="img/room_3.jpg" alt="room_3">
-            <h3 class="room_preview_title">2-местный</h3>
-            <p class="room_preview_info_text">Место:</p>
-            <p class="room_preview_info_sum">500 Р</p>
-            <p class="room_preview_info_text">Номер:</p>
-            <p class="room_preview_info_sum">5000 Р</p>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 room_preview_block">
+          <div class="room_preview_info room_2_place">
+            <h2 class="room_preview_title">2-местный</h2>
+             <table class="rooms preview_table">
+              <tr>
+                <th>Место:</th>
+                <td>500 Р</td>
+              </tr>
+              <tr>
+                <th>Номер:</th>
+                <td>5000 Р</td>
+              </tr>
+            </table>
           </div>
         </div>
-        <div class="col-xs-12 col-sm-6 room_preview_block">
-          <div class="room_preview_info"><img src="img/room_4.jpg" alt="room_4">
-            <h3 class="room_preview_title">Люкс</h3>
-            <p class="room_preview_info_text">Место:</p>
-            <p class="room_preview_info_sum">Не сдается</p>
-            <p class="room_preview_info_text">Номер:</p>
-            <p class="room_preview_info_sum">5000 Р</p>
-          </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 room_preview_block">
+          <div class="room_preview_info room_lux_place">
+            <h2 class="room_preview_title">Люкс</h2>
+             <table class="rooms preview_table">
+              <tr>
+                <th>Место:</th>
+                <td>Не сдается</td>
+              </tr>
+              <tr>
+                <th>Номер:</th>
+                <td>5000 Р</td>
+              </tr>
+            </table>
         </div>
       </div>
-      <a href="#" class="btn_promo_option">Выбрать номер</a>
+      <a class="btn promo_btn" href="#">Выбрать номер</a>
     </div>
   </section>
 
-  <section class="photo_preview hidden-xs">
-    <div class="container">
+  <section class="photo_preview hidden-xs hidden-sm hidden-md">
+  <div class="container-fluid">
       <h2 class="second_title">Фото хостела</h2>
       <div class="row">
         <div class="col-sm-6 col-lg-3 photo_preview_pic">
@@ -133,33 +166,29 @@
           <img src="img/photo_4_8.jpg">
         </div>
       </div>
-      <a href="#" class="btn_promo_option">Все фотографии</a>
-    </div> 
+       <a href="#" class="btn promo_btn">Все фотографии</a>
+  </div>  
   </section>
 
   <section class="about_fluger">
     <div class="container">
       <h2 class="about_fluger_title_center">"Флюгер" предлагает гостям</h2>
       <div class="row">
-        <div class="col-xs-12 col-sm-6 guest_block">
-         <img src="img/wifi_icon.png">
-          <div class="about_fluger_title_sm">Бесплатно сидеть в интернете</div>
-          <div class="about_fluger_go">Wi-Fi со скоростью 30 Мбит, который ловит даже на крыше</div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 guest_block about_fluger_internet">
+          <p class="about_fluger_title_text">Бесплатно сидеть в интернете</p>
+          <p class="internet_info">Wi-Fi со скоростью 30 Мбит, который ловит даже на крыше</p>
         </div>
-        <div class="col-xs-12 col-sm-6 guest_block">
-         <img src="img/cup_icon.png">
-          <div class="about_fluger_title_sm">Готовить обеды на кухне</div>
-          <div class="about_fluger_go">Или дать позаботиться о них хостелу за 300 Р</div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 guest_block about_fluger_dinner">
+          <p class="about_fluger_title_text">Готовить обеды на кухне</p>
+          <p class="internet_info">Или дать позаботиться о них хостелу за 300 Р</p>
         </div>
-        <div class="col-xs-12 col-sm-6 guest_block">
-         <img src="img/lock_icon.png">
-          <div class="about_fluger_title_sm">Заботиться о ценных вещях</div>
-          <div class="about_fluger_go">За каждой кроватью в хостеле закреплена камера хранения</div>
-        </div>
-        <div class="col-xs-12 col-sm-6 guest_block">
-         <img src="img/umbrella_icon.png">
-          <div class="about_fluger_title_sm">Слушать шум дождя на мансарде</div>
-          <div class="about_fluger_go">Она устроена для работы и отдыха и вмещает до 30 человек</div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 guest_block about_fluger_lockroom">
+          <p class="about_fluger_title_text">Заботиться о ценных вещях</p>
+          <p class="internet_info">За каждой кроватью в хостеле закреплена камера хранения</p>
+        </div>  
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 guest_block about_fluger_mansard">
+          <p class="about_fluger_title_text">Слушать шум дождя на мансарде</p>
+          <p class="internet_info">Она устроена для работы и отдыха и вмещает до 30 человек</p>
         </div>
       </div>
     </div>
@@ -169,16 +198,13 @@
     <div class="container">
       <h2 class="second_title">Контакты</h2>
       <div class="row">
-        <div class="col-xs-12 col-lg-4 contacts_address">
-        <img src="img/pin_icon.png">
+        <div class="col-xs-12 col-lg-6 contacts_pic contacts_address">
           <span>Наб. Канала Грибоедова,29</span>
         </div>
-        <div class="col-xs-12 col-lg-offset-2 col-lg-3 contacts_phone">
-         <img src="img/call_icon.png">
+        <div class="col-xs-12 col-lg-3 contacts_pic contacts_phone">
           <span>+7-999-105-05-25</span>
         </div>
-        <div class="col-xs-12 col-lg-3 contacts_email">
-         <img src="img/mail_icon.png">
+        <div class="col-xs-12 col-lg-3 contacts_pic contacts_email">
           <span>fluger@gmail.com</span>
         </div>
       </div>
@@ -186,7 +212,9 @@
     <div class="map">
    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.9951788701019!2d30.321964916222214!3d59.93222216957811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631068027ce53%3A0xec84af965a7927ba!2z0L3QsNCxLiDQutCw0L3QsNC70LAg0JPRgNC40LHQvtC10LTQvtCy0LAsIDI5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1457683552585" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
-     <a href="#" class="btn_promo_option">Забронировать</a>
+     <div class="center_button">
+     <a href="#" class="btn promo_btn">Забронировать</a>
+     </div>
   </section>
 
 </main>
@@ -194,29 +222,27 @@
   <footer class="footer_contacts">
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 col-sm-6 col-sm-push-6 footer_navigation">
-          <div class="row">
-          <div class="col-xs-12 col-md-6 foot_nav">
-            <p><a href="rooms.html">Номера</a></p>
-            <p><a href="photo.html">Фото</a></p>
-          </div>  
-           <div class="col-xs-12 col-md-6 foot_nav">
-            <p><a href="#guest">Гостям</a></p>
-            <p><a href="#reserv">Забронировать</a></p>
-          </div>  
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-sm-pull-6 footer_contacts">
-          <div class="row">
-            <div class="col-xs-12 col-md-6 footer_address">
+        <nav class="col-xs-12 col-sm-push-6 col-sm-6 col-md-push-6 col-md-6 col-lg-push-7 col-lg-5 footer_navigation">
+         <ul class="footer_nav list_nav">
+          <li class="footer_nav list_nav_left"><a href="rooms.html">Номера</a></li>
+           <li class="footer_nav list_nav_left"><a href="photo.html">Фото</a></li>
+           <li class="footer_nav list_nav_left"><a href="guest.html">Гостям</a></li>
+           <li class="footer_nav list_nav_left"><a href="reserv.html">Забронировать</a></li>
+          </ul>  
+          </nav>
+       
+        <div class="col-lg-7 col-sm-pull-6 col-sm-6 col-md-pull-6 col-md-6 col-lg-pull-5 col-lg-7 footer_contacts_info">
+          <div class="row"> 
+            <div class="col-xs-12 col-md-6 col-lg-5 footer_address">
               <p>Санкт-Петербург</p>
               <p>Наб. канала Грибоедова, 29</p>
             </div>
-            <div class="col-xs-12 col-md-6 footer_phone">
+            <div class="col-xs-12 col-md-6 col-lg-7 footer_phone">
               <p>+7 999 105-05-25</p>
               <p>fluger@gmail.com</p>
             </div>
-            <div class="col-xs-12 copyright">
+
+            <div class="col-xs-12 col-sm-pull-6 col-sm-6 col-md-pull-6 col-md-6 col-lg-pull-0 col-lg-12 copyright">
               <p>© 2015 «Флюгер»</p>
             </div>
           </div>
@@ -224,5 +250,6 @@
       </div>
     </div>
   </footer>
+
 </body>
 </html>
