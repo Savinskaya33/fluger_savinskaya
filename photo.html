@@ -20,7 +20,7 @@
           <li class="right_item"><a href="rooms.html">Номера</a></li>
           <li class="right_item"><a href="photo.html">Фото</a></li>
           <li class="right_item"><a href="#guest">Гостям</a></li>
-          <li class="right_item"><a href="#reserv">Забронировать</a></li>
+          <li class="right_item"><a href="#myModal" class="js-modal-start">Забронировать</a></li>
         </ul>
       </nav>  
       <div class="right_phone hidden-xs col-sm-4 col-md-4 col-lg-2"><p>+7 999 105-05-25</p>
@@ -112,7 +112,7 @@
         <img src="img/room_roof_4.jpg" alt="">
       </div>
        <div class="center_button">
-     <a href="#" class="btn promo_btn">Забронировать</a>
+     <a href="#" class="btn promo_btn js-modal-start">Забронировать</a>
      </div>
     </div>
   </section>
@@ -125,8 +125,8 @@
          <ul class="footer_nav list_nav">
           <li class="footer_nav list_nav_left"><a href="rooms.html">Номера</a></li>
            <li class="footer_nav list_nav_left"><a href="photo.html">Фото</a></li>
-           <li class="footer_nav list_nav_left"><a href="#">Гостям</a></li>
-           <li class="footer_nav list_nav_left"><a href="#">Забронировать</a></li>
+           <li class="footer_nav list_nav_left"><a href="guest.html">Гостям</a></li>
+           <li class="footer_nav list_nav_left"><a href="#myModal" class="js-modal-start">Забронировать</a></li>
           </ul>  
           </nav>
        
@@ -150,5 +150,30 @@
     </div>
   </footer>
 
+  <!-- Modal -->
+  <form class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Бронирование номеров</h4>
+        </div>
+        <div class="modal-body">
+         <input type="text" placeholder="Ваше имя" class="input-main"/>
+         <input type="text" placeholder="Телефон для связи" class="input-main"/>
+
+          <div class="js-room"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn promo_btn" data-dismiss="modal">Отмена</button>
+          <button type="submit" class="btn promo_btn">Отправить</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <script src="js/jquery-2.2.1.min.js"></script>
+  <script src="js/bootstrap-modal.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
