@@ -11,7 +11,7 @@
 
 <body>
 
- <header class="navigation">
+   <header class="navigation">
     <div class="container">
     <div class="row">
      <a href="index.html" class="col-sm-8 col-lg-3 logo_left"><img src="img/logo_fluger.png" alt="logo"></a>
@@ -25,6 +25,16 @@
       </nav>  
       <div class="right_phone hidden-xs col-sm-4 col-md-4 col-lg-2"><p>+7 999 105-05-25</p>
       </div>
+
+       <div class="mobile_menu hidden-lg">
+          <a href="#" class="toggler" id="toggler"><span></span></a>
+          <ul class="mobile_nav" id="nav">
+            <li class="left_item"><a href="rooms.html">Номера</a></li>
+            <li class="left_item"><a href="photo.html">Фото</a></li>
+            <li class="left_item"><a href="#about-guests">Гостям</a></li>
+            <li class="left_item"><a href="#myModal" class="js-modal-start">Забронировать</a></li>
+          </ul>
+        </div>
     </div>
    </div>
   </header>
@@ -243,7 +253,7 @@
   </footer>
 
   <!-- Modal -->
-  <form class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+   <form class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -253,6 +263,8 @@
         <div class="modal-body">
          <input type="text" placeholder="Ваше имя" class="input-main"/>
          <input type="text" placeholder="Телефон для связи" class="input-main"/>
+         <input type="date" placeholder="Выберите дату" class="input-main"/>
+         
 
           <div class="js-room"></div>
         </div>

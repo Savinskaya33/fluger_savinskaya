@@ -1341,8 +1341,7 @@ ul {
 .input-main{
   padding: 10px 20px;
   margin-top: 10px;
-  width: 80%;
-  background-color: #fff;
+  width: 500px;
   border: 2px solid #ef5350;
   color: #ef5350;
   font-size: 16px;
@@ -1403,6 +1402,94 @@ ul {
   display: table;
 }
 
+
+.toggler{
+  background-color: #ef5350;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  width: 75px;
+  height: 75px;
+  line-height: 10px;
+  user-select: none;
+}
+
+.toggler > span {
+  width: 23px;
+  height: 2px;
+  background-color: #fff;
+  position: relative;
+  display: block;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.toggler > span:before,
+.toggler > span:after {
+  width: 100%;
+  height: .3rem;
+  background: #fff;
+  border-radius: .2rem;
+  position: absolute;
+  left: 0;
+  content: '';
+  transform-origin: 50% 50%;
+  transition: top .3s .6s, transform .3s;
+}
+.toggler > span:before {
+  top: 1rem;
+}
+.toggler > span:after {
+  top: -1rem;
+}
+.toggler--close > span {
+  transition: background .3s 0;
+  background: transparent;
+}
+.toggler--close > span:before,
+.toggler--close > span:after {
+  transition: top .3s, transform .3s .5s;
+  top: 0;
+}
+.toggler--close > span:before {
+  transform: rotate3d(0, 0, 1, 45deg);
+}
+.toggler--close > span:after {
+  transform: rotate3d(0, 0, 1, -45deg);
+}
+.mobile_nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: none;
+}
+.nav--visible {
+  display: block;
+}
+.left_item {
+  display: block;
+}
+.left_item:first-child a {
+  padding-right: 3em;
+}
+.left_item a {
+  display: block;
+  padding: 0 1em;
+  height: 3em;
+  line-height: 3;
+  background-color: #000;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
 .navigation {
   height: 65px;
   background-color: #fff;
@@ -1449,30 +1536,24 @@ ul {
 
 .promo_block {
   background-image: url(../img/bg_fluger_main.jpg);
-  background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 153px;
-  padding-bottom: 94px;
-  color: #fff;
+  height: 566px;
   text-align: center;
-  min-height: 566px;
 }
 
 .promo_block_title {
-  margin: 0;
-  margin-top: 160px;
+  font-size: 36px;
+  font-weight: bold;
   text-transform: uppercase;
-  font-size: 26px;
-  line-height: 32px;
+  margin-top: 245px;
+  color: #fff;
 }
 
 
 .promo_block_address {
-  margin: 0;
-  margin-bottom: 65px;
+  color: #fff;
   font-size: 18px;
-  position: relative;
-  padding-left: 14px;
+  margin-bottom: 40px;
 }
 
 .promo_block_address:before{
@@ -1507,14 +1588,15 @@ ul {
 }
 
 .second_title{
-  font-size: 32px;
+  font-size: 36px;
   line-height: 36px;
   font-weight: 500;
   color: #444;
   position: relative;
   margin: 0;
+  margin-top: 90px;
   margin-bottom: 45px;
-  padding-bottom: 25px;
+  padding-bottom: 5px;
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
@@ -1533,20 +1615,42 @@ ul {
 }
 
 .about_fluger{
-  padding-top: 60px;
-  padding-bottom: 60px;
+  text-align: center;
+  padding: 60px 0;
   background-color: #ef5350;
   color: #fff;
-  text-align: center;
 }
 
-
 .about_fluger_title_center{
-  margin: 0;
-  margin-bottom: 50px;
   font-weight: bold;
   font-size: 24px;
   text-transform: uppercase;
+}
+
+.about_fluger_pic_title{
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: bold;
+}
+.about_fluger_pic_info{
+  font-size: 14px;
+  line-height: 18px;
+  padding-top: 7px;
+  padding-right: 30px;
+  margin: 0 0 0 75px;
+  color: #ffcdd2;
+}
+
+.item_town:before{
+  background-image: url(../img/directions_icon.png);
+  margin-left: 15px;
+}
+.item_roof:before{
+  background-image: url(../img/key_icon.png);
+}
+.item_room:before{
+  background-image: url(../img/sunsets_icon.png);
+  margin-top: 10px;
 }
 
 .about_fluger_pic{
@@ -1554,153 +1658,73 @@ ul {
   padding: 20px 0px;
 }
 
-.about_fluger_title_town{
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
-  line-height: 24px;
-  margin-bottom: 12px;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.about_fluger_title_town:before {
-  content: "";
-  display: inline-block;
-  background-image: url(../img/directions_icon.png);
+.about_fluger_pic:before{
+  content: '';
+  background-repeat: no-repeat;
   width: 72px;
   height: 65px;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-  margin-left: 15px;
-}
-
-.about_fluger_title_roof{
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
-  line-height: 24px;
-  margin-bottom: 12px;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.about_fluger_title_roof:before {
-  content: "";
-  display: inline-block;
-  background-image: url(../img/sunsets_icon.png);
-  width: 72px;
-  height: 65px;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-  margin-left: 15px;
-}
-
-.about_fluger_title_number{
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
-  line-height: 24px;
-  margin-bottom: 12px;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.about_fluger_title_number:before {
-  content: "";
-  display: inline-block;
-  background-image: url(../img/key_icon.png);
-  width: 72px;
-  height: 65px;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-  margin-left: 15px;
-}
-
-.about_fluger_go{
-  font-size: 14px;
-  padding-right: 30px;
-  margin: 0 0 0 90px;
-  color: #fff;
-}
-
-.about_fluger_title_sm{
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
+  float: left;
+  margin-left: 30px;
 }
 
 .rooms_preview{
   text-align: center;
-  padding-top: 120px;
-  margin-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 70px;
 }
 
 .rooms{
+  padding-top: 115px;
+  margin-bottom: 45px;
+}
+
+.rooms_item_block{
+  position: relative;
+  width:460px;
+  height:460px;
+  display: inline-block;
+  float: none;
+  margin: 5px;
+}
+
+.rooms_item_info{
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.rooms_item_descr{
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.rooms_item_table{
   border: none;
   outline: none;
   color: #212121;
   font-size: 18px;
 }
 
-.rooms th{
-  font-weight: bold;
+.rooms_item_table th{
+ font-weight: bold;
   padding: 2px;
   text-align: left;
 }
-
-.rooms td{
+.rooms_item_table td{
   padding-left: 20px;
   text-align: left;
 }
 
-.preview_table{
-  margin: 20px auto 0;
-}
-
-.room_preview_title{
-  font-size: 24px;
-  color: #212121;
+.room_item_title{
+  font-size: 22px;
+  color: #000;
   font-weight: bold;
   text-transform: uppercase;
-  padding-top: 200px;
-}
-
-.room_preview_info{
-  height: 460px;
-  width: 460px;
-  background-size: cover;
-  position: relative;
-}
-
-.room_preview_info:after{
-  content: '';
-  display: block;
-  background-color: rgba(255,255,255,0.1);
-  opacity: 20%;
-  z-index: 1;
-  position: absolute;
-  top: 0;
-}
-
-.room_preview_info:hover:after{
-  background-color: rgba(255,255,255,0);
-}
-
-.room_12_place{
-  background-image: url(../img/room_1.jpg);
-}
-
-.room_6_place{
-  background-image: url(../img/room_2.jpg);
-}
-
-.room_2_place{
-  background-image: url(../img/room_3.jpg);
-}
-
-.room_lux_place{
-  background-image: url(../img/room_4.jpg);
 }
 
 .photo_preview{
@@ -1708,107 +1732,59 @@ ul {
   padding: 0 50px;
 }
 
-.guest_block{
-  text-align: left;
-}
-
 .photo_preview_pic{
   height: 183px;
   margin: 15px 0;
 }
 
-.about_fluger_title_text{
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
-  line-height: 24px;
-  margin-bottom: 12px;
-  display: inline-block;
-  vertical-align: middle;
+.guest_block{
+  text-align: left;
+  padding: 0 20px 40px 0;
 }
 
-.about_fluger_internet{
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
-  line-height: 24px;
-  margin-bottom: 12px;
-  display: inline-block;
-  vertical-align: middle;
+.guest_block:nth-child(2n+1){
+  clear: both;
+}
+.guest_block:before{
+  content: '';
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 55px;
+  float: left;
+  margin-top: 4px;
+  margin-left: 15px;
 }
 
 .about_fluger_internet:before{
-  content: "";
-  display: inline-block;
   background-image: url(../img/wifi_icon.png);
-  width: 64px;
-  height: 61px;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-  margin-left: 15px;
 }
-
-.about_fluger_dinner{
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
-  line-height: 24px;
-  margin-bottom: 12px;
-  display: inline-block;
-  vertical-align: middle;
-}
-
 .about_fluger_dinner:before{
-  content: "";
-  display: inline-block;
   background-image: url(../img/cup_icon.png);
-  width: 53px;
-  height: 54px;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-  margin-left: 15px;
 }
-
-.about_fluger_lockroom{
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
-  line-height: 24px;
-  margin-bottom: 12px;
-  display: inline-block;
-  vertical-align: middle;
-}
-
 .about_fluger_lockroom:before{
-  content: "";
-  display: inline-block;
   background-image: url(../img/lock_icon.png);
-  width: 56px;
-  height: 59px;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-  margin-left: 15px;
 }
-
-.about_fluger_mansard{
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
-  line-height: 24px;
-  margin-bottom: 12px;
-  display: inline-block;
-  vertical-align: middle;
-}
-
 .about_fluger_mansard:before{
-  content: "";
-  display: inline-block;
   background-image: url(../img/umbrella_icon.png);
-  width: 56px;
-  height: 54px;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-  margin-left: 15px;
+}
+
+.about_fluger_title_text{
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: bold;
+  padding-top: 7px;
+  padding-right: 30px;
+  margin: 0 0 0 75px;
+
+}
+
+.internet_info{
+  font-size: 14px;
+  line-height: 18px;
+  padding-top: 7px;
+  padding-right: 30px;
+  margin: 0 0 0 75px;
+  color: #ffcdd2;
 }
 
 .contacts{
@@ -1918,7 +1894,6 @@ ul {
 
 .rooms{
   padding: 50px;
-
 }
 
 .promo_title_rooms{
@@ -2029,18 +2004,15 @@ ul {
 
 .footer_contacts{
   color: #fff;
- 
 }
 
 .footer_navigation{
   color: #fff;
- 
 }
 
 .footer_navigation_list{
   font-size: 18px;
   color: #fff;
-
 }
 
 .footer_navigation_list_left{
